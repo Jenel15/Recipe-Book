@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Book</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ffcc00;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Recipe Book</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Add Recipe</a></li>
+            <li><a href="#">Favorite Recipes</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Recipe display area -->
+        <div id="recipe-list">
+            <!-- Recipes will be dynamically added here -->
+        </div>
+
+        <!-- Form for adding/editing recipes -->
+        <div id="recipe-form">
+            <h2>Add/Edit Recipe</h2>
+            <form id="add-edit-form">
+                <label for="recipe-name">Name:</label>
+                <input type="text" id="recipe-name" required><br>
+
+                <label for="recipe-cuisine">Cuisine:</label>
+                <input type="text" id="recipe-cuisine" required><br>
+
+                <label for="recipe-ingredients">Ingredients:</label>
+                <textarea id="recipe-ingredients" required></textarea><br>
+
+                <label for="recipe-instructions">Instructions:</label>
+                <textarea id="recipe-instructions" required></textarea><br>
+
+                <button type="button" onclick="addRecipe()">Add Recipe</button>
+                <button type="button" onclick="editRecipe()">Save Changes</button>
+                <button type="button" onclick="clearForm()">Clear Form</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Recipe Book</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
